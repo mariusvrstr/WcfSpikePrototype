@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="00a1b6a7-44d2-4bc8-a457-4a5896c51356" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AuthorService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Spike.Contracts.Services.wsdl" MetadataType="Wsdl" ID="bb1720df-aefc-4549-ab19-3c3a4bd206b9" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="AuthorService.wsdl" MetadataType="Wsdl" ID="1875ab3d-9746-4d08-8a88-010f7af4a422" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0b0e0edb-5fea-4501-93fa-83e9b995a998" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="Spike.Contracts.Services.xsd" MetadataType="Schema" ID="af67ceba-1d4b-4d4f-bec0-808b2c8b6dea" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="71ff2772-c7f2-4a7f-8cf6-c2e94f511612" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="Spike.Contracts.Authors.Requests.xsd" MetadataType="Schema" ID="b11bd108-9837-4226-a369-48d3abddebd3" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+    <MetadataFile FileName="Spike.Contracts.Authors.xsd" MetadataType="Schema" ID="7fe27e88-406f-4397-b16a-0b294470f04d" SourceId="1" SourceUrl="http://localhost/AuthorService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

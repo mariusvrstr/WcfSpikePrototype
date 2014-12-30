@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Spike.Contracts.Services" elementFormDefault="qualified" targetNamespace="Spike.Contracts.Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="Spike.Contracts.Authors.Requests" />
+  <xs:import namespace="Spike.Contracts.Authors" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="AddAuthor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="Spike.Contracts.Authors.Requests" minOccurs="0" name="request" nillable="true" type="q1:AddAuthorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAuthorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="Spike.Contracts.Authors" minOccurs="0" name="AddAuthorResult" nillable="true" type="q2:Author" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAuthors">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAuthorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="Spike.Contracts.Authors" minOccurs="0" name="GetAllAuthorsResult" nillable="true" type="q3:ArrayOfAuthor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="authorId" type="q4:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="Spike.Contracts.Authors" minOccurs="0" name="GetAuthorByIdResult" nillable="true" type="q5:Author" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
