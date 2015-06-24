@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IAuthorService.cs" />
     <Compile Include="Services\IBookService.cs" />
+    <Compile Include="Consumers\ServiceClientWrapper.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

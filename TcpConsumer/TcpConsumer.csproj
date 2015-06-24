@@ -7,8 +7,8 @@
     <ProjectGuid>{7A33926A-8562-4E22-8F07-310CD3ADC410}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Spikes.TcpConsumer</RootNamespace>
-    <AssemblyName>Spikes.TcpConsumer</AssemblyName>
+    <RootNamespace>Spike.TcpConsumer</RootNamespace>
+    <AssemblyName>Spike.TcpConsumer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Spike.Contracts.Authors.Author.datasource" />
     <None Include="Service References\AuthorProxy\AuthorService.wsdl" />
     <None Include="Service References\AuthorProxy\service.wsdl" />
     <None Include="Service References\AuthorProxy\service.xsd">
@@ -68,9 +69,6 @@
     <None Include="Service References\AuthorProxy\Spike.Contracts.Services.wsdl" />
     <None Include="Service References\AuthorProxy\Spike.Contracts.Services.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AuthorProxy\Spikes.TcpConsumer.AuthorProxy.Author.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +85,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{3de37f9d-ff7c-4a29-80a0-0c23638fea2b}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

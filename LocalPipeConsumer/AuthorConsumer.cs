@@ -5,6 +5,7 @@ namespace Spike.LocalPipeConsumer
     using System.Collections.Generic;
     using Contracts.Authors;
     using Contracts.Authors.Requests;
+    using Contracts.Consumers;
     using AuthorProxy;
 
     public class AuthorConsumer
@@ -13,13 +14,12 @@ namespace Spike.LocalPipeConsumer
         {
             Author author;
 
-            // Warning! this approach could leave open failed connections
-            using (var proxy = new AuthorServiceClient())
+            var consumer = new ServiceClientWrapper<AuthorServiceClient, IAuthorService>();
+            if (consumer.IsServiceAvailabe())
             {
-                proxy.Open();
-                author = proxy.AddAuthor(request);
-                proxy.Close();
+                author = consumer.Excecute(service => service.AddAuthor(request));
             }
+            else throw new Exception(@"Service is not available, please check that the host have been started [PipesHost\bin\Debug\Spike.PipesHost.exe]");
 
             return author;
         }
@@ -28,13 +28,12 @@ namespace Spike.LocalPipeConsumer
         {
             Author author;
 
-            // Warning! this approach could leave open failed connections
-            using (var proxy = new AuthorServiceClient())
+            var consumer = new ServiceClientWrapper<AuthorServiceClient, IAuthorService>();
+            if (consumer.IsServiceAvailabe())
             {
-                proxy.Open();
-                author = proxy.GetAuthorById(authorId);
-                proxy.Close();
+                author = consumer.Excecute(service => service.GetAuthorById(authorId));
             }
+            else throw new Exception(@"Service is not available, please check that the host have been started [PipesHost\bin\Debug\Spike.PipesHost.exe]");
 
             return author;
         }
@@ -43,13 +42,12 @@ namespace Spike.LocalPipeConsumer
         {
             IEnumerable<Author> authors;
 
-            // Warning! this approach could leave open failed connections
-            using (var proxy = new AuthorServiceClient())
+            var consumer = new ServiceClientWrapper<AuthorServiceClient, IAuthorService>();
+            if (consumer.IsServiceAvailabe())
             {
-                proxy.Open();
-                authors = proxy.GetAllAuthors();
-                proxy.Close();
+                authors = consumer.Excecute(service => service.GetAllAuthors());
             }
+            else throw new Exception(@"Service is not available, please check that the host have been started [PipesHost\bin\Debug\Spike.PipesHost.exe]");
 
             return authors;
         }
